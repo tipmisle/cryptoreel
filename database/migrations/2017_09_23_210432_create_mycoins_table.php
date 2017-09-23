@@ -17,8 +17,9 @@ class CreateMycoinsTable extends Migration
             $table->increments('id');
             $table->string('coin_name');
             $table->integer('user_id');
-            $table->decimal('buy_price_usd', 11, 10);
-            $table->decimal('buy_price_btc', 11, 10);
+            $table->decimal('buy_price_usd', 10, 5);
+            $table->decimal('buy_price_btc', 10, 5);
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
