@@ -12,6 +12,11 @@
 */
 
 Route::get('/', [
+	'as' => 'landing',
+	'uses' => 'LandingController@landing'
+]);
+
+Route::get('home', [
 	'as' => 'home',
 	'uses' => 'HomeController@home'
 ]);

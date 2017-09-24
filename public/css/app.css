@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,600,800);/*!
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,600,800,700,900);/*!
  * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
  * Copyright 2011-2017 Twitter, Inc.
@@ -10202,6 +10202,7 @@ a.text-gray-dark:hover {
 }
 
 body {
+  background-color: #DAECF3;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -10211,5 +10212,112 @@ body * {
 
 .navbar {
   background-color: #012D41;
+}
+
+.coins {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.coins .coin {
+  padding: 5px 15px;
+  background-color: #FFF;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.coins .coin:last-child {
+  border-bottom: none;
+}
+
+.coins .coin:hover .edit {
+  opacity: 1;
+}
+
+.coins .coin .branding img {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  display: block;
+}
+
+.coins .coin .branding small {
+  width: 100%;
+  float: left;
+  text-align: center;
+  margin-top: 3px;
+}
+
+.coins .coin .holdings p {
+  margin: 2px 0 0;
+  padding: 0;
+  float: left;
+  width: 100%;
+}
+
+.coins .coin .holdings p span {
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.coins .coin .price p {
+  margin: 15px 0 0;
+  padding: 0;
+  width: 100%;
+  float: left;
+  text-align: right;
+  font-size: 1.2em;
+  font-weight: 900;
+}
+
+.coins .coin .edit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: #FFF;
+  opacity: 0;
+  -webkit-transition: 100ms all ease-in-out;
+  transition: 100ms all ease-in-out;
+}
+
+.coins .coin .edit ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 100%;
+}
+
+.coins .coin .edit ul li {
+  width: 50%;
+  float: left;
+  position: relative;
+  height: 100%;
+}
+
+.coins .coin .edit ul li p {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin: 0;
+  padding: 0px 0;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.coins .coin .edit ul li p:hover {
+  font-weight: bold;
+}
+
+.my-coins {
+  padding-top: 20px;
+}
+
+.my-coins h2 {
+  margin-bottom: 15px;
 }
 

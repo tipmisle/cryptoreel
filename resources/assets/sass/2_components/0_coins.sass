@@ -1,0 +1,74 @@
+.coins
+	list-style: none
+	padding: 0
+	margin: 0
+	.coin
+		padding: 5px 15px
+		background-color: #FFF  
+		border-bottom: 1px solid rgba(#000, 0.1)
+		position: relative
+		&:last-child
+			border-bottom: none 
+		&:hover
+			.edit
+				opacity: 1
+				
+		.branding
+			img
+				width: 30px
+				height: 30px
+				margin: 0 auto
+				display: block
+			small
+				width: 100%
+				float: left
+				text-align: center
+				margin-top: 3px
+		.holdings
+			p
+				margin: 2px 0 0
+				padding: 0
+				float: left
+				width: 100% 
+				span
+					font-size: 0.8em
+					color: rgba(#000, 0.6)  
+		.price
+			p
+				margin: 15px 0 0
+				padding: 0
+				width: 100%
+				float: left
+				text-align: right
+				font-size: 1.2em
+				font-weight: 900
+		.edit
+			position: absolute
+			top: 0
+			right: 0
+			height: 100%
+			background-color: #FFF 
+			opacity: 0
+			transition: 100ms all ease-in-out
+			ul
+				list-style: none
+				padding: 0
+				margin: 0
+				position: relative
+				height: 100%
+				li
+					width: 50%
+					float: left
+					position: relative
+					height: 100%
+					p
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						margin: 0
+						padding: 0px 0
+						text-align: center
+						width: 100%
+						cursor: pointer
+						&:hover
+							font-weight: bold 
