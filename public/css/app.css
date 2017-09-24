@@ -10214,6 +10214,27 @@ body * {
   background-color: #012D41;
 }
 
+.sidebar {
+  padding: 20px 0;
+}
+
+.sidebar h2 {
+  margin-bottom: 15px;
+}
+
+.sidebar .statistics {
+  background-color: #FFF;
+  width: 100%;
+  float: left;
+  padding: 10px;
+}
+
+.sidebar .statistics h3 {
+  width: 100%;
+  float: left;
+  text-align: right;
+}
+
 .coins {
   list-style: none;
   padding: 0;
