@@ -15,7 +15,8 @@ class CoinController extends Controller
     	$coins = json_decode($response->body, true);	
     	for ($i=0; $i < count($coins); $i++) { 
     		$c = Coin::where('id', '=', $coins[$i]['id'])->first();
-    		$c->name = $coins[$i]['name'];
+            $c->id = $coins[$i]['id'];
+            $c->name = $coins[$i]['name'];
     		$c->symbol = $coins[$i]['symbol'];
     		$c->rank = $coins[$i]['rank'];
     		$c->price_usd = $coins[$i]['price_usd'];
