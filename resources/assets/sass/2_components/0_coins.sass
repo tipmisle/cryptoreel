@@ -3,7 +3,7 @@
 	padding: 0
 	margin: 0
 	.coin
-		padding: 5px 15px
+		padding: 10px 15px
 		background-color: #FFF  
 		border-bottom: 1px solid rgba(#000, 0.1)
 		position: relative
@@ -11,9 +11,11 @@
 			border-bottom: none 
 		&:hover
 			.edit
-				opacity: 1
+				opacity: 0
+				display: none
 				
 		.branding
+			padding: 0
 			img
 				width: 30px
 				height: 30px
@@ -24,6 +26,7 @@
 				float: left
 				text-align: center
 				margin-top: 3px
+				+ellipsis(100%)
 		.holdings
 			p
 				margin: 2px 0 0

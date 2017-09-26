@@ -28,3 +28,22 @@ Route::get('populate', [
 	'as' => 'populate',
 	'uses' => 'CoinController@populate'
 ]);
+
+
+// USER APi
+
+Route::get('api/user/coins', [
+	'as' => 'myCoins',
+	'uses' => 'UserController@myCoins'
+]);
+
+
+
+
+// COIN API
+
+Route::get('api/coin/{name}', [
+	'as' => 'coinInfo',
+	'uses' => 'CoinController@coinInfo'
+]);
+

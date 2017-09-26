@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use Requests;
 use App\Coin;
+use App\MyCoin;
 
 class CoinController extends Controller
 {
@@ -32,5 +33,11 @@ class CoinController extends Controller
     		$c->market_cap_eur = $coins[$i]['market_cap_eur'];
     		$c->save();
     	}
+    }
+
+    public function coinInfo($name) {
+        $coin = Coin::where('slug', '=', $name)->first();
+        $sum = MyCoin::where('coin_name', '=', $name)->sum('quantity');
+        return response()->json(['coin' => $coin, 'sum' => $sum]);
     }
 }

@@ -10242,7 +10242,7 @@ body * {
 }
 
 .coins .coin {
-  padding: 5px 15px;
+  padding: 10px 15px;
   background-color: #FFF;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   position: relative;
@@ -10253,7 +10253,12 @@ body * {
 }
 
 .coins .coin:hover .edit {
-  opacity: 1;
+  opacity: 0;
+  display: none;
+}
+
+.coins .coin .branding {
+  padding: 0;
 }
 
 .coins .coin .branding img {
@@ -10268,6 +10273,12 @@ body * {
   float: left;
   text-align: center;
   margin-top: 3px;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
 }
 
 .coins .coin .holdings p {
